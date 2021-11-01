@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<style>
+form {
+    margin: auto;
+    width: 50%;
+}
+
+.result {
+    background-color: #DA627D;
+    margin: auto;
+    width: 35%;
+    border: 1px solid #ccc;
+}
+</style>
+
+<head>
+    <title>INBOUND TRUCK MODEL</title>
+</head>
+<form action="{{ url_for('func_inbt') }}" method="POST">
+    <fieldset>
+        <legend>Input values:</legend>
+        DC No.:
+        <input name="Scrub_dc_no" type="number" required>
+        <br>
+        <br> Year:
+        <input name="Year" type="number" required>
+        <br>
+        <br> Week:
+        <input name="Week" type="number" required>
+        <br>
+        <br>
+        <input type="submit">
+    </fieldset>
+</form>
+<br>
+<div class="result" align="center">
+    {% if result %}
+    	{% for variable, value in original_input.items() %}
+    		<b>{{ variable }}</b> : {{ value }}
+    	{% endfor %}
+		<br>
+    	<br> Predicted number of inbound truckloads:
+   		<p style="font-size:50px">{{ result }}</p>
+    {% endif %}
+</div>
+
+</html>

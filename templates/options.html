@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 1rem auto;
+    }
+    .left {
+        width: 100%;
+        background-color: #F9DBBD;
+    }
+    .left img {
+        width: 100%;
+        object-fit: contain;
+        display: block;
+    }
+    .right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #DA627D;
+        height: 400px;
+    }
+    .right a {
+        background-color: #FB9A74;
+        text-decoration: none;
+        height: 80px;
+        width: 400px;
+        margin: 1rem auto;
+        cursor: pointer;
+        border-radius: 1rem;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        font-size: x-large;
+        color: #FCEBDA;
+    }
+</style>
+
+<head>
+    <title>INBOUND TRUCK MODEL</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <img src='https://media-fastly.hackerearth.com/media/hackathon/tractor-supply-hackathon/images/919eeabee4-new2x.jpg' alt='' />
+        </div>
+        <div class="right">
+            <a href="/inbt">Predict number of inbound truck loads</a>
+            <a href="/ru">Predict number of received units</a>
+        </div>
+    </div>
+</body>
+
+</html>
